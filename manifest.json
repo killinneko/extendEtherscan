@@ -1,0 +1,18 @@
+{
+    "name": "Sample Chrome Extension",
+    "description": "Extend view",
+    "version": "0.11",
+    "manifest_version": 3,
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://tabelog.com/*"],
+            "js": ["replace.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
