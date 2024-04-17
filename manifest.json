@@ -1,18 +1,19 @@
 {
-    "name": "Sample Chrome Extension",
-    "description": "Extend view",
-    "version": "0.11",
+    "name": "Sepolia Etherscan用　アドレスエイリアス設定拡張機能",
+    "description": "登録したアドレスの任意の文字列に置き換えて表示する拡張機能",
+    "version": "0.90",
     "manifest_version": 3,
-    "permissions": [
-        "storage"
-    ],
+    "permissions": ["storage"],
     "content_scripts": [
-        {
-            "matches": ["https://tabelog.com/*"],
-            "js": ["replace.js"]
-        }
+      {
+        "matches": ["https://sepolia.etherscan.io/*"],
+        "js": ["js/replace.js"]
+      }
     ],
     "action": {
-        "default_popup": "popup.html"
+      "default_popup": "popup/popup.html"
+    },
+    "icons": {
+      "48": "favicon.ico"
     }
-}
+  }

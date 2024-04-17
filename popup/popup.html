@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拡張機能の設定画面</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+      }
+      button {
+        padding: 8px 16px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="css/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main class="p-3">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a href="#replace" data-bs-toggle="tab" class="nav-link active"
+            >置換登録</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#switch" data-bs-toggle="tab" class="nav-link">機能切替</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div id="replace" class="tab-pane active">
+          <input type="text" id="address" placeholder="対象アドレス" />
+          <input type="text" id="aliasString" placeholder="置換後の文字列" />
+          <button type="button" class="btn btn-primary" id="registButton">
+            登録
+          </button>
+          <button type="button" class="btn btn-danger" id="resetButton">
+            削除/リセット
+          </button>
+        </div>
+        <div id="switch" class="tab-pane">
+          <button type="button" class="btn btn-primary" id="toggleButton">
+            有効無効の切り替え
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
